@@ -8,8 +8,15 @@ spring:
   cloud:
     config:
       server:
-        native:
-          search-locations: classpath:/config
+#        composite:
+#          - type: git
+#            uri: https://github.com/your-repository/config-repo
+#          - type: file
+#            location: classpath:/config
+        git:
+          uri: git@github.com:IslomW/License_Service.git
+#        native:
+#          search-locations: classpath:/config
 
 server:
   port: 8071
